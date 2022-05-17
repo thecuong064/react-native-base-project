@@ -2,7 +2,7 @@ import React from 'react';
 
 import {StyleSheet, Text, Button, SafeAreaView} from 'react-native';
 
-const Registration = ({navigation}) => {
+export const Registration = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <Text>Registration</Text>
@@ -18,5 +18,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-export default Registration;

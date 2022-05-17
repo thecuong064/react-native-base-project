@@ -1,9 +1,9 @@
 import React from 'react';
 
 import {StyleSheet, Text, Button, SafeAreaView} from 'react-native';
-import Screens from '../../constants/Screens';
+import {Screens} from '../../navigations';
 
-const Login = ({navigation}) => {
+export const Login = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
       <Text>Login</Text>
@@ -14,6 +14,7 @@ const Login = ({navigation}) => {
     </SafeAreaView>
   );
 };
+
 const styles = StyleSheet.create({
   container: {
     padding: 20,
@@ -22,5 +23,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-export default Login;
