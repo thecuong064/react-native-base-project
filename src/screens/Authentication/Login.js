@@ -1,7 +1,9 @@
 import React from 'react';
 
 import {StyleSheet, Text, Button, SafeAreaView} from 'react-native';
-import {Screens} from '../../navigations';
+import {Modals, Screens} from '../../constants';
+import {showModal} from '../../redux/actions/modalActions';
+import store from '../../redux/configureStore';
 
 export const Login = ({navigation}) => {
   return (
@@ -10,6 +12,10 @@ export const Login = ({navigation}) => {
       <Button
         title="Go to Registration"
         onPress={() => navigation.navigate(Screens.REGISTRATION)}
+      />
+      <Button
+        title="Coming Soon banner"
+        onPress={() => store.dispatch(showModal(Modals.ComingSoon))}
       />
     </SafeAreaView>
   );
