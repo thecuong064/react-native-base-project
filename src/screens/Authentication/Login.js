@@ -1,11 +1,17 @@
-import React from 'react';
+import React, {useRef} from 'react';
 
 import {StyleSheet, Text, Button, SafeAreaView} from 'react-native';
+import {ExampleBottomSheet} from '../../components/bottomSheets';
 import {Modals, Screens} from '../../constants';
 import {showModal} from '../../redux/actions/modalActions';
 import store from '../../redux/configureStore';
 
 export const Login = ({navigation}) => {
+  const sheetRef = useRef(null);
+
+  const showBottomSheet = () => {
+    sheetRef.current?.present();
+  };
   return (
     <SafeAreaView style={styles.container}>
       <Text>Login</Text>
@@ -17,6 +23,8 @@ export const Login = ({navigation}) => {
         title="Coming Soon banner"
         onPress={() => store.dispatch(showModal(Modals.ComingSoon))}
       />
+      <Button title="Bottom sheet" onPress={showBottomSheet} />
+      <ExampleBottomSheet ref={sheetRef} />
     </SafeAreaView>
   );
 };
