@@ -1,4 +1,4 @@
-import ApiActionTypes from './constants';
+import {ImagesActionTypes} from '../reducers/imagesReducer';
 
 export const getImages = () => ({
   type: ApiActionTypes.GET_IMAGES,
@@ -6,11 +6,11 @@ export const getImages = () => ({
 });
 
 export const loadImagesSuccess = payload => ({
-  type: ApiActionTypes.LOAD_IMAGES_SUCCESS,
+  type: ImagesActionTypes.LOAD_IMAGES_SUCCESS,
   payload: payload,
 });
 
 export const loadImagesFailed = payload => ({
-  type: ApiActionTypes.LOAD_IMAGES_FAILED,
+  type: ImagesActionTypes.LOAD_IMAGES_FAILED,
   payload: payload,
 });

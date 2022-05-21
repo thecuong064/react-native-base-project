@@ -1,7 +1,7 @@
 import {call, put, fork, takeLatest} from 'redux-saga/effects';
 import photosApi from '../../api/photosApi';
-import {loadImagesFailed, loadImagesSuccess} from './actions';
-import ApiActionTypes from './constants';
+import {ImagesActionTypes} from '../reducers/imagesReducer';
+import {loadImagesFailed, loadImagesSuccess} from '../actions/imagesActions';
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 
@@ -20,7 +20,7 @@ export function* getImagesAsync() {
 }
 
 function* getListCardWatch() {
-  yield takeLatest(ApiActionTypes.GET_IMAGES, getImagesAsync);
+  yield takeLatest(ImagesActionTypes.GET_IMAGES, getImagesAsync);
 }
 
 export default function* rootChild() {
