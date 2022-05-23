@@ -20,6 +20,10 @@ export const Login = ({navigation}) => {
         onPress={() => navigation.navigate(Screens.REGISTRATION)}
       />
       <Button
+        title="Go to Main"
+        onPress={() => navigation.navigate(Screens.BOTTOM_TAB)}
+      />
+      <Button
         title="Coming Soon banner"
         onPress={() => store.dispatch(showModal(Modals.ComingSoon))}
       />

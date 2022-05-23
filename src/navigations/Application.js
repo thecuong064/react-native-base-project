@@ -9,6 +9,7 @@ import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
 import store, {persistor} from '../redux/configureStore';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
+import {BottomTab} from './';
 
 const AppStack = createNativeStackNavigator();
 
@@ -22,20 +23,16 @@ export const Application = () => {
               <AppStack.Navigator
                 initialRouteName={Screens.LOGIN}
                 screenOptions={{
-                  headerStyle: {
-                    backgroundColor: '#f4511e',
-                  },
-                  headerTintColor: '#fff',
-                  headerTitleStyle: {
-                    fontWeight: 'bold',
-                    alignSelf: 'center',
-                  },
-                  headerTitleAlign: 'center',
+                  headerShown: false,
                 }}>
                 <AppStack.Screen name={Screens.LOGIN} component={Login} />
                 <AppStack.Screen
                   name={Screens.REGISTRATION}
                   component={Registration}
+                />
+                <AppStack.Screen
+                  name={Screens.BOTTOM_TAB}
+                  component={BottomTab}
                 />
               </AppStack.Navigator>
               <ModalContainer />
