@@ -30,7 +30,7 @@ ImageButton.propTypes = {
 };
 
 ImageButton.defaultProps = {
-  iconSource: null,
-  wrapperStyle: null,
-  iconStyle: null,
+  iconSource: undefined,
+  wrapperStyle: undefined,
+  iconStyle: undefined,
 };

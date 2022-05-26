@@ -5,6 +5,7 @@ import {ExampleBottomSheet} from '../../components/bottomSheets';
 import {Modals, Screens} from '../../constants';
 import {showModal} from '../../redux/actions/modalActions';
 import store from '../../redux/configureStore';
+import {AppText} from '../../components/general';
 
 export const Login = ({navigation}) => {
   const sheetRef = useRef(null);
@@ -14,7 +15,7 @@ export const Login = ({navigation}) => {
   };
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Login</Text>
+      <AppText style={{fontSize: 20, fontWeight: '200'}}>Login</AppText>
       <Button
         title="Go to Registration"
         onPress={() => navigation.navigate(Screens.REGISTRATION)}
