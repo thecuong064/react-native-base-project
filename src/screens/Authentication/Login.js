@@ -6,6 +6,7 @@ import {Modals, Screens} from '../../constants';
 import {showModal} from '../../redux/actions/modalActions';
 import store from '../../redux/configureStore';
 import {AppText} from '../../components/general';
+import {colorWithOpacity} from '../../utils/ColorUtil';
 
 export const Login = ({navigation}) => {
   const sheetRef = useRef(null);
@@ -37,7 +38,7 @@ export const Login = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    backgroundColor: '#E8EAED',
+    backgroundColor: colorWithOpacity('#ff0000', 0.2),
     flex: 1,
     justifyContent: 'center',
   },
